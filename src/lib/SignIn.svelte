@@ -38,6 +38,9 @@
 	}
 </script>
 
+<h1>Sign in</h1>
+<p>Not a member? <a href="/sign-up">Sign up</a></p>
+
 <form action="javascript:void(0);">
 	<div class="input-group has-validation">
 		<input

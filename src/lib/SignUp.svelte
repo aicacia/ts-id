@@ -44,6 +44,9 @@
 	}
 </script>
 
+<h1>Sign up</h1>
+<p>Already a member? <a href="/sign-in">Sign in</a></p>
+
 <form action="javascript:void(0);">
 	<div class="input-group has-validation">
 		<input
