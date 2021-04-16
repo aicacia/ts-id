@@ -18,7 +18,7 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
 
       - run: npm i
-      - run: npm run web.build
+      - run: NODE_ENV=production npm run web.build
 
       - uses: peaceiris/actions-gh-pages@v3
         with:
