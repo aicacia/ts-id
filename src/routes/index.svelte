@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-	import { signIn, getToken } from '$lib/user';
+	import { signIn, getToken } from '$lib/state/user';
 
 	export const prerender = false;
 
@@ -15,7 +15,7 @@
 
 <script lang="ts">
 	import type { User_Private } from '$lib/api/id';
-	import { signOut } from '$lib/user';
+	import { signOut } from '$lib/state/user';
 	import { goto } from '$app/navigation';
 
 	export let user: User_Private;

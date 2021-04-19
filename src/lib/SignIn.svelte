@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { UserService, ApiError } from './api/id';
-	import { setToken } from './user';
+	import { setToken } from './state/user';
 
 	let loading = false;
 
