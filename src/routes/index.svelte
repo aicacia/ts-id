@@ -1,35 +1,23 @@
-<script lang="ts" context="module">
-	import { signIn, getToken } from '$lib/state/user';
-
-	export const prerender = false;
-
-	/** @type {import('@sveltejs/kit').Load} */
-	export async function load() {
-		return signIn(decodeURIComponent(getToken()))
-			.then((user) => ({
-				props: { user }
-			}))
-			.catch((_error) => ({ redirect: '/sign-in', status: 307 }));
-	}
-</script>
-
 <script lang="ts">
 	import type { User_Private } from '$lib/api/id';
-	import { signOut } from '$lib/state/user';
+	import { signIn, getToken, signOut, userStore } from '$lib/state/user';
 	import { goto } from '$app/navigation';
-
-	export let user: User_Private;
+	import { onMount } from 'svelte';
 
 	function onSignOut() {
 		signOut();
 		goto('/sign-in');
 	}
+
+	onMount(() => {
+		signIn(decodeURIComponent(getToken())).catch((_error) => goto('/sign-in'));
+	});
 </script>
 
 <svelte:head>
-	<title>{user.username}</title>
+	<title>{$userStore.username}</title>
 </svelte:head>
 
-<h1>Hello, {user.username}!</h1>
+<h1>Hello, {$userStore.username}!</h1>
 
 <button class="btn btn-primary" on:click={onSignOut}>Sign out</button>
