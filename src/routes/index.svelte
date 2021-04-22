@@ -1,5 +1,4 @@
 <script lang="ts">
-	import type { User_Private } from '$lib/api/id';
 	import { signIn, getToken, signOut, userStore } from '$lib/state/user';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
