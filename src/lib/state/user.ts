@@ -3,9 +3,7 @@ import Cookies from 'js-cookie';
 
 export const USER_TOKEN = 'aicacia-user-token';
 
-if (process.env.NODE_ENV === 'production') {
-	OpenAPI.BASE = 'https://api.id.aicacia.com';
-}
+OpenAPI.BASE = import.meta.env.VITE_ID_API_URI;
 
 export function signIn(token: string): Promise<User_Private> {
 	setToken(token);
