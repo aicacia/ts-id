@@ -1,1 +1,104 @@
-<meta http-equiv="refresh" content="0;url=/sign-in">
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script type="text/javascript">
+			// Single Page Apps for GitHub Pages
+			// MIT License
+			// https://github.com/rafgraph/spa-github-pages
+			// This script checks to see if a redirect is present in the query string,
+			// converts it back into the correct url and adds it to the
+			// browser's history using window.history.replaceState(...),
+			// which won't cause the browser to attempt to load the new url.
+			// When the single page app is loaded further down in this file,
+			// the correct url will be waiting in the browser's history for
+			// the single page app to route accordingly.
+			(function (l) {
+				if (l.search[1] === '/') {
+					var decoded = l.search
+						.slice(1)
+						.split('&')
+						.map(function (s) {
+							return s.replace(/~and~/g, '&');
+						})
+						.join('?');
+					window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+				}
+			})(window.location);
+		</script>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+			crossorigin="anonymous"
+		/>
+		<title>guest</title>
+
+		
+
+		<link rel="modulepreload" href="/./_app/start-2cc43283.js">
+		<link rel="modulepreload" href="/./_app/chunks/index-8f7ec9ee.js">
+		<link rel="modulepreload" href="/./_app/chunks/singletons-50565683.js">
+		<link rel="modulepreload" href="/./_app/pages/$layout.svelte-56f084d1.js">
+		<link rel="modulepreload" href="/./_app/pages/index.svelte-d880b09d.js">
+		<link rel="modulepreload" href="/./_app/chunks/navigation-f6a18859.js">
+		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
+
+		<script type="module">
+			import { start } from "/./_app/start-2cc43283.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"","assets":"/."},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/./_app/pages/$layout.svelte-56f084d1.js"),
+						import("/./_app/pages/index.svelte-d880b09d.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="svelte">
+
+
+<main class="container">
+
+<h1>Hello, guest!</h1>
+
+<button class="btn btn-primary">Sign out</button></main>
+
+
+
+	
+</div>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+			integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+			integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
