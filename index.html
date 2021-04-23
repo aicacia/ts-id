@@ -4,30 +4,6 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<script type="text/javascript">
-			// Single Page Apps for GitHub Pages
-			// MIT License
-			// https://github.com/rafgraph/spa-github-pages
-			// This script checks to see if a redirect is present in the query string,
-			// converts it back into the correct url and adds it to the
-			// browser's history using window.history.replaceState(...),
-			// which won't cause the browser to attempt to load the new url.
-			// When the single page app is loaded further down in this file,
-			// the correct url will be waiting in the browser's history for
-			// the single page app to route accordingly.
-			(function (l) {
-				if (l.search[1] === '/') {
-					var decoded = l.search
-						.slice(1)
-						.split('&')
-						.map(function (s) {
-							return s.replace(/~and~/g, '&');
-						})
-						.join('?');
-					window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
-				}
-			})(window.location);
-		</script>
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
@@ -42,16 +18,16 @@
 
 		
 
-		<link rel="modulepreload" href="/./_app/start-51f2c87a.js">
-		<link rel="modulepreload" href="/./_app/chunks/index-8f7ec9ee.js">
-		<link rel="modulepreload" href="/./_app/chunks/singletons-50565683.js">
-		<link rel="modulepreload" href="/./_app/pages/$layout.svelte-56f084d1.js">
-		<link rel="modulepreload" href="/./_app/pages/index.svelte-b0e76bb8.js">
-		<link rel="modulepreload" href="/./_app/chunks/navigation-f6a18859.js">
+		<link rel="modulepreload" href="/./_app/start-4dba354e.js">
+		<link rel="modulepreload" href="/./_app/chunks/index-128c958e.js">
+		<link rel="modulepreload" href="/./_app/chunks/singletons-2bbdf6b6.js">
+		<link rel="modulepreload" href="/./_app/pages/$layout.svelte-a5e95fd4.js">
+		<link rel="modulepreload" href="/./_app/chunks/navigation-22e30b47.js">
+		<link rel="modulepreload" href="/./_app/pages/index.svelte-b851208e.js">
 		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
 
 		<script type="module">
-			import { start } from "/./_app/start-51f2c87a.js";
+			import { start } from "/./_app/start-4dba354e.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"","assets":"/."},
@@ -63,8 +39,8 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/./_app/pages/$layout.svelte-56f084d1.js"),
-						import("/./_app/pages/index.svelte-b0e76bb8.js")
+						import("/./_app/pages/$layout.svelte-a5e95fd4.js"),
+						import("/./_app/pages/index.svelte-b851208e.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -80,11 +56,16 @@
 		<div id="svelte">
 
 
+<header class="p-3"><div class="container"><div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"><a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none text-black"><h3>Aicacia Id</h3></a>
+
+	<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"></ul>
+
+	<div class="text-end"><a type="button" class="btn btn-primary me-2" href="/sign-in">Login</a>
+			<a type="button" class="btn btn-secondary" href="/sign-up">Sign-up</a></div></div></div></header>
+
 <main class="container">
 
-<h1>Hello, guest!</h1>
-
-<button class="btn btn-primary">Sign out</button></main>
+<h1>Hello, guest!</h1></main>
 
 
 
