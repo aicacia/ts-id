@@ -6,8 +6,8 @@
  * health check
  */
 export type Util_HealthCheck = {
-    /**
-     * ok status
-     */
-    ok: boolean;
-}
+	/**
+	 * ok status
+	 */
+	ok: boolean;
+};

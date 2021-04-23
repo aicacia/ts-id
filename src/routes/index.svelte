@@ -1,12 +1,7 @@
 <script lang="ts">
-	import { signIn, getToken, signOut, userStore } from '$lib/state/user';
+	import { signIn, getToken, userStore } from '$lib/state/user';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
-
-	function onSignOut() {
-		signOut();
-		goto('/sign-in');
-	}
 
 	onMount(() => {
 		signIn(decodeURIComponent(getToken())).catch((_error) => goto('/sign-in'));
@@ -18,5 +13,3 @@
 </svelte:head>
 
 <h1>Hello, {$userStore.username}!</h1>
-
-<button class="btn btn-primary" on:click={onSignOut}>Sign out</button>

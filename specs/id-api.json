@@ -126,7 +126,7 @@
 				"x-struct": "Elixir.Aicacia.Id.Web.Schema.Util.HealthCheck"
 			}
 		},
-		"securitySchemes": { "Authorization": { "scheme": "bearer", "type": "http" } }
+		"securitySchemes": { "authorization": { "scheme": "bearer", "type": "http" } }
 	},
 	"info": { "title": "aicacia_id", "version": "0.1.0" },
 	"openapi": "3.0.0",
@@ -435,6 +435,6 @@
 		}
 	},
 	"security": [],
-	"servers": [{ "url": "http://localhost:4000", "variables": {} }],
+	"servers": [{ "url": "https://api.id.aicacia.com", "variables": {} }],
 	"tags": []
 }
