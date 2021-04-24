@@ -12,7 +12,7 @@
 </svelte:head>
 
 <div class="d-flex align-items-center justify-content-center">
-	<div class="col-12 col-lg-auto mb-3">
+	<div class="col-12 col-lg-auto mt-3 mb-3">
 		<UsernameEditor username={$userStore.username} />
 	</div>
 </div>

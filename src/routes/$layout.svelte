@@ -34,7 +34,7 @@
 		'primary': #2673d8
 	);
 
-	$spacer: 2rem;
+	$spacer: 0.5rem;
 	$enable-rounded: false;
 
 	@import 'bootstrap/scss/bootstrap';
