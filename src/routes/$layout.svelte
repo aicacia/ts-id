@@ -8,27 +8,45 @@
 	}
 </script>
 
-<header class="p-3">
-	<div class="container">
-		<div
-			class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
-		>
-			<a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none text-black">
-				<h3>Aicacia Id</h3>
-			</a>
+<header class="container">
+	<div class="d-flex flex-wrap align-items-center justify-content-center">
+		<div class="d-flex align-items-center">
+			<a href="/" type="button" class="btn btn-lg btn-primary"> Aicacia Id </a>
+		</div>
 
-			<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" />
+		<div class="nav col-auto me-auto" />
 
-			<div class="text-end">
-				{#if $userStore.token}
-					<button type="button" class="btn btn-primary me-2" on:click={onSignOut}>Sign out</button>
-				{:else}
-					<a type="button" class="btn btn-primary me-2" href="/sign-in">Login</a>
-					<a type="button" class="btn btn-secondary" href="/sign-up">Sign-up</a>
-				{/if}
-			</div>
+		<div class="text-end">
+			{#if $userStore.token}
+				<button type="button" class="btn btn-primary me-2" on:click={onSignOut}>Sign out</button>
+			{:else}
+				<a type="button" class="btn btn-primary me-2" href="/sign-in">Login</a>
+				<a type="button" class="btn btn-secondary" href="/sign-up">Sign-up</a>
+			{/if}
 		</div>
 	</div>
 </header>
 
 <main class="container"><slot /></main>
+
+<style lang="scss" global>
+	$theme-colors: (
+		'primary': #2673d8
+	);
+
+	$spacer: 2rem;
+	$enable-rounded: false;
+
+	@import 'bootstrap/scss/bootstrap';
+	@import 'bootstrap/scss/functions';
+
+	@import 'bootstrap/scss/variables';
+	@import 'bootstrap/scss/mixins';
+
+	@import 'bootstrap/scss/root';
+	@import 'bootstrap/scss/reboot';
+	@import 'bootstrap/scss/type';
+	@import 'bootstrap/scss/images';
+	@import 'bootstrap/scss/containers';
+	@import 'bootstrap/scss/grid';
+</style>

@@ -116,6 +116,15 @@
 				"type": "object",
 				"x-struct": "Elixir.Aicacia.Id.Web.Schema.User.Private"
 			},
+			"User.UsernameUpdate": {
+				"description": "update user's username",
+				"example": { "username": "username" },
+				"properties": { "username": { "description": "username", "type": "string" } },
+				"required": ["username"],
+				"title": "User.UsernameUpdate",
+				"type": "object",
+				"x-struct": "Elixir.Aicacia.Id.Web.Schema.User.UsernameUpdate"
+			},
 			"Util.HealthCheck": {
 				"description": "health check",
 				"example": { "ok": true },
@@ -432,9 +441,61 @@
 				"summary": "Reset Password",
 				"tags": ["User"]
 			}
+		},
+		"/api/user/username": {
+			"patch": {
+				"callbacks": {},
+				"deprecated": false,
+				"description": "Updates a User's Username\n",
+				"operationId": "Aicacia.Id.Web.Controller.Api.User.Username.update",
+				"parameters": [],
+				"requestBody": {
+					"content": {
+						"application/json": { "schema": { "$ref": "#/components/schemas/User.UsernameUpdate" } }
+					},
+					"description": "Update User's Username Body",
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"content": {
+							"application/json": { "schema": { "$ref": "#/components/schemas/User.Private" } }
+						},
+						"description": "Update User's Username Response"
+					}
+				},
+				"security": [],
+				"summary": "Update User's Username",
+				"tags": ["User"]
+			},
+			"put": {
+				"callbacks": {},
+				"deprecated": false,
+				"description": "Updates a User's Username\n",
+				"operationId": "Aicacia.Id.Web.Controller.Api.User.Username.update (2)",
+				"parameters": [],
+				"requestBody": {
+					"content": {
+						"application/json": { "schema": { "$ref": "#/components/schemas/User.UsernameUpdate" } }
+					},
+					"description": "Update User's Username Body",
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"content": {
+							"application/json": { "schema": { "$ref": "#/components/schemas/User.Private" } }
+						},
+						"description": "Update User's Username Response"
+					}
+				},
+				"security": [],
+				"summary": "Update User's Username",
+				"tags": ["User"]
+			}
 		}
 	},
 	"security": [],
-	"servers": [{ "url": "https://api.id.aicacia.com", "variables": {} }],
+	"servers": ["https://api.id.aicacia.com"],
 	"tags": []
 }

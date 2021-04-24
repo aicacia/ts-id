@@ -6,8 +6,8 @@
  * create user email
  */
 export type User_EmailCreate = {
-	/**
-	 * Email address
-	 */
-	email: string;
-};
+    /**
+     * Email address
+     */
+    email: string;
+}
