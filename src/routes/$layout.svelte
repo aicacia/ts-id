@@ -11,17 +11,17 @@
 <header class="container">
 	<div class="d-flex flex-wrap align-items-center justify-content-center">
 		<div class="d-flex align-items-center">
-			<a href="/" type="button" class="btn btn-lg btn-primary"> Aicacia Id </a>
+			<a href="/" class="btn btn-lg btn-primary" role="button"> Aicacia Id </a>
 		</div>
 
 		<div class="nav col-auto me-auto" />
 
 		<div class="text-end">
 			{#if $userStore.token}
-				<button type="button" class="btn btn-primary me-2" on:click={onSignOut}>Sign out</button>
+				<button type="button" class="btn btn-primary" on:click={onSignOut}>Sign out</button>
 			{:else}
-				<a type="button" class="btn btn-primary me-2" href="/sign-in">Login</a>
-				<a type="button" class="btn btn-secondary" href="/sign-up">Sign-up</a>
+				<a role="button" class="btn btn-primary" href="/sign-in">Login</a>
+				<a role="button" class="btn btn-secondary" href="/sign-up">Sign-up</a>
 			{/if}
 		</div>
 	</div>
