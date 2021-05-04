@@ -2,7 +2,7 @@
 	import { signIn, getToken, userStore } from '$lib/state/user';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
-	import UsernameEditor from '$lib/UsernameEditor.svelte';
+	import Username from '$lib/Username.svelte';
 
 	onMount(() => signIn(decodeURIComponent(getToken())).catch((_error) => goto('/sign-in')));
 </script>
@@ -13,6 +13,6 @@
 
 <div class="d-flex align-items-center justify-content-center">
 	<div class="col-12 col-lg-auto mt-3 mb-3">
-		<UsernameEditor username={$userStore.username} />
+		<Username username={$userStore.username} />
 	</div>
 </div>
